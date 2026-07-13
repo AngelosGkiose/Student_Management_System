@@ -15,7 +15,7 @@ This project allows users to manage students, courses, enrollments and grades wh
 - Update student information
 - Delete a student
 
-### 📚 Course Management
+###  Course Management
 - Add a course
 - View all courses
 - Delete a course
