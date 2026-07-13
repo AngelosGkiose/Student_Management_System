@@ -88,7 +88,7 @@ class StudentManagementSystem:
 
             if student is None:
                 print("Student not found.")
-                continue
+                return
 
             print(student)
             return
@@ -114,7 +114,7 @@ class StudentManagementSystem:
 
             if student is None:
                 print("Student not found.")
-                continue
+                return
 
             print("\nStudent found.")
             print("Current information:")
@@ -195,7 +195,7 @@ class StudentManagementSystem:
 
             if student is None:
                 print("Student not found.")
-                continue
+                return
 
             if self.database.has_enrollments(
                 student_id
@@ -311,7 +311,7 @@ class StudentManagementSystem:
 
             if course is None:
                 print("Course not found.")
-                continue
+                return
 
             if self.database.has_students_enrolled(
                 course_code
