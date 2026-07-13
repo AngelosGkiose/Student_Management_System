@@ -165,8 +165,3 @@ Through this project I practiced:
 - PostgreSQL support
 - Unit tests
 
----
-
-# Author
-
-Aggelos Trevor
