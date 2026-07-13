@@ -363,7 +363,7 @@ class StudentManagementSystem:
 
             if course is None:
                 print("Course not found.")
-                continue
+                return
 
             try:
                 student_id = int(
@@ -384,7 +384,7 @@ class StudentManagementSystem:
 
             if student is None:
                 print("Student not found.")
-                continue
+                return
 
             count = self.database.count_course_students(
                 course_code
@@ -410,6 +410,7 @@ class StudentManagementSystem:
                 "This student is already enrolled "
                 "in this course."
             )
+            return
 
     def handle_remove_student_from_course(self):
         while True:
@@ -432,7 +433,7 @@ class StudentManagementSystem:
 
             if student is None:
                 print("Student not found.")
-                continue
+                return
 
             course_code = input(
                 "Enter Course Code: "
@@ -448,7 +449,7 @@ class StudentManagementSystem:
 
             if course is None:
                 print("Course not found.")
-                continue
+                return
 
             if not self.database.is_student_enrolled(
                 student.student_id,
@@ -458,7 +459,7 @@ class StudentManagementSystem:
                     "This student is not enrolled "
                     "in this course."
                 )
-                continue
+                return
 
             self.database.remove_student_from_course(
                 student.student_id,
@@ -492,7 +493,7 @@ class StudentManagementSystem:
 
             if student is None:
                 print("Student not found.")
-                continue
+                return
 
             enrollments = (
                 self.database.view_student_courses(
@@ -559,7 +560,7 @@ class StudentManagementSystem:
 
             if student is None:
                 print("Student not found.")
-                continue
+                return
 
             course_code = input(
                 "Course code: "
@@ -575,7 +576,7 @@ class StudentManagementSystem:
 
             if course is None:
                 print("Course not found.")
-                continue
+                return
 
             if not self.database.is_student_enrolled(
                 student.student_id,
@@ -585,7 +586,7 @@ class StudentManagementSystem:
                     "This student is not enrolled "
                     "in this course."
                 )
-                continue
+                return
 
             try:
                 grade = float(
@@ -625,7 +626,7 @@ class StudentManagementSystem:
 
             if course is None:
                 print("Course not found.")
-                continue
+                return
 
             avg_grade = self.database.show_avg_grade(
                 course.course_code
