@@ -1,4 +1,4 @@
-from courses import Course
+from course import Course
 from database import DatabaseManager
 from student import Student
 

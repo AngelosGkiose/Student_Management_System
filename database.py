@@ -1,6 +1,6 @@
 import sqlite3
 
-from courses import Course
+from course import Course
 from student import Student
 
 
